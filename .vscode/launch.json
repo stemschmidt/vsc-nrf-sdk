@@ -21,6 +21,28 @@
                 "-target-download",
                 "monitor reset 0"
             ],
+           "postLaunchCommands": [
+               "file application/build/zephyr/zephyr.elf"
+            ],
+            "rtos": "zephyr",
+            "runToEntryPoint": "main"
+        },
+        {
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "jlink",
+            "gdbTarget": "192.168.178.53:2331", // <-- how do I get to my local GDBServer?
+            "name": "GitPod",
+            "device": "nrf9160",
+            "interface": "swd",
+            "cwd": "${workspaceRoot}",
+            "executable": "application/build/zephyr/merged.hex",
+            "svdFile": "modules/hal/nordic/nrfx/mdk/nrf9160.svd",
+            "overrideLaunchCommands": [
+                "monitor reset 0",
+                "-target-download",
+                "monitor reset 0"
+            ],
             "postLaunchCommands": [
                 "file application/build/zephyr/zephyr.elf"
             ],
