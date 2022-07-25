@@ -1,0 +1,28 @@
+//devcontainer.json
+{
+    "name": "nrf Connect SDK",
+    "build": {
+        "dockerfile": "dockerfile"
+    },
+
+    "postStartCommand": "/bin/bash",
+
+    "settings": {
+        "terminal.integrated.profiles.linux": {
+            "bash": {
+                "path": "bash",
+                "icon": "terminal-bash"
+            }
+        }
+    },
+    
+    "extensions": ["marus25.cortex-debug"],
+
+    "remoteUser": "vscode",
+
+    "runArgs": [
+        "--add-host=host.docker.internal:host-gateway",
+        "--rm"
+    ]
+}
+  

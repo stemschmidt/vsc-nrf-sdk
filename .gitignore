@@ -1,0 +1,12 @@
+application/build/
+bootloader/
+mbedtls/
+modules/
+nrf/
+nrfxlib/
+test/
+tools/
+zephyr/
+.west/
+.vscode/.cortex-debug.peripherals.state.json
+.vscode/.cortex-debug.registers.state.json

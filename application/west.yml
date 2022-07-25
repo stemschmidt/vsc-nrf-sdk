@@ -1,0 +1,23 @@
+# The west manifest file (west.yml) for the demo application
+#
+# See the west documentation for more information:
+#
+# https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/zephyr/guides/west/index.html
+
+manifest:
+  # This west.yml requires west 0.12s or later, because the "import"
+  # feature used below was introduced then.
+  version: 0.12
+
+  # "projects" is a list of git repositories which make up the NCS
+  # source code.
+  projects:
+
+    - name: nrf
+      url: https://github.com/nrfconnect/sdk-nrf
+      revision: v2.0.0
+      import: true
+
+  self:
+    # This repository should be cloned to application.
+    path: application
