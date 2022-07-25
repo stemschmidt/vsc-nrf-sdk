@@ -6,11 +6,95 @@
     "showDevDebugOutput":true,
     "configurations": [
         {
+            "name": "Debug Peripheral LBS",
+            "cwd": "${workspaceFolder}/nrf/samples/bluetooth/peripheral_lbs",
+            "executable": "./build/zephyr/merged.hex",
+            "interface": "swd",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "external",
+            "gdbTarget": "host.docker.internal:2331",
+            "device": "nrf5340",
+            "overrideLaunchCommands": [
+                "monitor reset 0",
+                "-target-download",
+                "monitor reset 0"
+            ],
+            "postLaunchCommands": [
+                "file ./build/zephyr/zephyr.elf"
+             ],
+             "rtos": "zephyr",
+             "showDevDebugOutput": "none",
+             "runToEntryPoint": "main"
+        },
+        {
+            "name": "Debug HCI IPC",
+            "cwd": "${workspaceFolder}/zephyr/samples/bluetooth/hci_rpmsg",
+            "executable": "./build/zephyr/zephyr.elf",
+            "interface": "swd",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "external",
+            "gdbTarget": "host.docker.internal:2331",
+            "device": "nrf5340",
+            "overrideLaunchCommands": [
+                "monitor reset 0",
+                "-target-download",
+                "monitor reset 0"
+            ],
+            "postLaunchCommands": [
+                "file ./build/zephyr/zephyr.elf"
+             ],
+             "rtos": "zephyr",
+             "showDevDebugOutput": "none",
+             "runToEntryPoint": "main"
+        },
+        {
+            "name": "Debug CAP sample",
+            "cwd": "${workspaceFolder}/nrf/samples/caf",
+            "executable": "./build/zephyr/zephyr.elf",
+            "interface": "swd",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "external",
+            "gdbTarget": "host.docker.internal:2331",
+            "device": "nrf5340",
+            "overrideLaunchCommands": [
+                "monitor reset 0",
+                "-target-download",
+                "monitor reset 0"
+            ],
+             "showDevDebugOutput": "none",
+            "runToEntryPoint": "main"
+        },
+        {
             "type": "cortex-debug",
             "request": "launch",
             "servertype": "external",
             "gdbTarget": "host.docker.internal:2331",
             "name": "Jlink",
+            "device": "nrf9160",
+            "interface": "swd",
+            "cwd": "${workspaceRoot}",
+            "executable": "application/build/zephyr/merged.hex",
+            "svdFile": "modules/hal/nordic/nrfx/mdk/nrf9160.svd",
+            "overrideLaunchCommands": [
+                "monitor reset 0",
+                "-target-download",
+                "monitor reset 0"
+            ],
+           "postLaunchCommands": [
+               "file application/build/zephyr/zephyr.elf"
+            ],
+            "rtos": "zephyr",
+            "runToEntryPoint": "main"
+        },
+        {
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "jlink",
+            "gdbTarget": "192.168.178.53:2331", // <-- how do I get to my local GDBServer?
+            "name": "GitPod",
             "device": "nrf9160",
             "interface": "swd",
             "cwd": "${workspaceRoot}",
