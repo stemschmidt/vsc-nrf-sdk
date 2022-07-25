@@ -1,24 +1,23 @@
 //devcontainer.json
 {
-    "name": "nrf Connect SDK",
-    "build": {
-        "dockerfile": "dockerfile"
-    },
+    "build": { "dockerfile": "Dockerfile" },
 
-    "postStartCommand": "/bin/bash",
-
-    "settings": {
-        "terminal.integrated.profiles.linux": {
-            "bash": {
-                "path": "bash",
-                "icon": "terminal-bash"
-            }
+    // Configure tool-specific properties.
+    "customizations": {
+        // Configure properties specific to VS Code.
+        "vscode": {
+            "settings": {},
+            "extensions": [
+				"ms-vscode.cpptools-extension-pack",
+				"mcu-debug.debug-tracker-vscode",
+				"mcu-debug.peripheral-viewer",
+				"mcu-debug.memory-view",
+				"marus25.cortex-debug"
+			]
         }
     },
-    
-    "extensions": ["marus25.cortex-debug"],
 
-    "remoteUser": "vscode",
+    "remoteUser": "user",
 
     "runArgs": [
         "--add-host=host.docker.internal:host-gateway",
