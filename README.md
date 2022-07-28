@@ -3,6 +3,7 @@ Pre-Requisites:
 - git installed
 - vscode installed, with plugins "Remote Containers", "Cortex-Debug"
 - docker installed
+- Segger JLinkServer
 
 How to use:
 1. "git clone https://github.com/stemschmidt/vsc-nrf-sdk.git"
