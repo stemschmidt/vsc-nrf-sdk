@@ -17,7 +17,7 @@ How to use:
 9. "cd application"
 10. "west build -b nrf9160dk_nrf9160_ns" and wait for the build to finish...
 
-11. on the host, launch the JLinkGDBServer (e.g "JLinkGDBServerCL -if swd -device nRF9160_xxAA -vd")
+11. on the host, launch the JLinkGDBServer (e.g "JLinkGDBServerCLExe -if swd -device nRF9160_xxAA -vd")
 12. on the host, launch the JLinkRTTViewer to see debug log (e.g "JLinkRTTViewer", select "Connection to J-Link" -> "Existing session")
 
 13. Select "Run and Debug" icon in activity bar in VSCode --> Download binary and start debugging by launching "JLink" 
