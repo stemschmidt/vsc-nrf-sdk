@@ -1,4 +1,7 @@
 # vsc-nrf-sdk
+
+## Option one
+
 Pre-Requisites:
 - git installed
 - vscode installed, with plugins "Remote Containers", "Cortex-Debug"
@@ -22,3 +25,19 @@ How to use:
 
 13. Select "Run and Debug" icon in activity bar in VSCode --> Download binary and start debugging by launching "JLink" 
 
+## Option two, research in progress
+
+Pre-Requisites:
+- current browser
+- after the workspace is opened, continue with step 6. from Option one
+- if you want to flash and debug locally: Segger JLinkServer
+
+<a href="https://gitpod.io/#https://github.com/stemschmidt/vsc-nrf-sdk.git">
+  <img
+    src="https://img.shields.io/badge/Contribute%20with-Gitpod-908a85?logo=gitpod"
+    alt="Contribute with Gitpod"
+  />
+</a>
+
+### ISSUE:
+- don't know how to access the JLinkGDBServer on my host: I can open the workspace locally in VSCode, but I am not able to access the JLinkGDBServer
