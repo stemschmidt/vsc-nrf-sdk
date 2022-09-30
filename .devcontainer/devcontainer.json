@@ -1,10 +1,7 @@
 //devcontainer.json
 {
     "name": "nrf Connect SDK",
-    "build": {
-        "dockerfile": "dockerfile"
-    },
-
+    "image": "zephyrprojectrtos/zephyr-build:v0.23.3",
     "postStartCommand": "/bin/bash",
 
     "settings": {
@@ -18,7 +15,7 @@
     
     "extensions": ["marus25.cortex-debug"],
 
-    "remoteUser": "vscode",
+    "remoteUser": "user",
 
     "runArgs": [
         "--add-host=host.docker.internal:host-gateway",

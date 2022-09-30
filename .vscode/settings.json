@@ -1,5 +1,5 @@
 {
     "cortex-debug.JLinkGDBServerPath": "/opt/SEGGER/JLink/JLinkGDBServerCLExe",
     "cortex-debug.armToolchainPrefix": "arm-zephyr-eabi",
-    "cortex-debug.armToolchainPath": "/workdir/zephyr-sdk/arm-zephyr-eabi/bin"
+    "cortex-debug.armToolchainPath": "/opt/toolchains/zephyr-sdk-0.14.2/arm-zephyr-eabi/bin/"
 }
