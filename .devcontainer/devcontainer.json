@@ -1,19 +1,23 @@
 //devcontainer.json
 {
     "name": "nrf Connect SDK",
-    "image": "zephyrprojectrtos/zephyr-build:v0.23.3",
+    "image": "zephyrprojectrtos/zephyr-build:v0.26.5",
     "postStartCommand": "/bin/bash",
 
-    "settings": {
-        "terminal.integrated.profiles.linux": {
-            "bash": {
-                "path": "bash",
-                "icon": "terminal-bash"
-            }
+    // Configure tool-specific properties.
+    "customizations": {
+        // Configure properties specific to VS Code.
+        "vscode": {
+            "settings": {},
+            "extensions": [
+				"marus25.cortex-debug",
+				"ms-vscode.cpptools-extension-pack",
+				"mcu-debug.debug-tracker-vscode",
+				"mcu-debug.peripheral-viewer",
+				"mcu-debug.memory-view"
+			]
         }
     },
-    
-    "extensions": ["marus25.cortex-debug"],
 
     "remoteUser": "user",
 

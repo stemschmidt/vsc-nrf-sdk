@@ -6,6 +6,24 @@
     "showDevDebugOutput":true,
     "configurations": [
         {
+            "name": "Debug CAP sample",
+            "cwd": "${workspaceFolder}/nrf/samples/caf",
+            "executable": "./build/zephyr/zephyr.elf",
+            "interface": "swd",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "external",
+            "gdbTarget": "host.docker.internal:2331",
+            "device": "nrf5340",
+            "overrideLaunchCommands": [
+                "monitor reset 0",
+                "-target-download",
+                "monitor reset 0"
+            ],
+             "showDevDebugOutput": "none",
+            "runToEntryPoint": "main"
+        },
+        {
             "type": "cortex-debug",
             "request": "launch",
             "servertype": "external",
