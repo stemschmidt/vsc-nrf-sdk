@@ -1,7 +1,7 @@
 //devcontainer.json
 {
     "name": "nrf Connect SDK",
-    "image": "zephyrprojectrtos/zephyr-build:v0.26.5",
+    "image": "zephyrprojectrtos/zephyr-build:v0.26.6",
     "postStartCommand": "/bin/bash",
 
     // Configure tool-specific properties.
